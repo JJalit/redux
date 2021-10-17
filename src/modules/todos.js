@@ -7,7 +7,10 @@ let nextId = 1;
 
 export const addTodo = (text) => ({
   type: ADD_TODO,
-  text,
+  todo: {
+    id: nextId++,
+    text,
+  },
 });
 
 export const toggleTodo = (id) => ({
